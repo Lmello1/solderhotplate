@@ -22,12 +22,11 @@ void loop() {
    Serial.print("C = "); 
    Serial.println(thermocouple.readCelsius());
    
- if (thermocouple.readCelsius() >= target); {
+if (thermocouple.readCelsius() <= target) {
    digitalWrite(10, HIGH);
    Serial.print("Up");
    delay(1000);
- }
- if (1 < 0); {
+ } else if (thermocouple.readCelsius() >= target) {
    digitalWrite(10, LOW);
    Serial.print("Down");
    delay(1000);
